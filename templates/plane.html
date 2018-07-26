@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+   <body>
+   
+      <h2 style = "text-align: center;">Planes Prediction</h2>
+		
+      {% for message in form.day.errors %}
+         <div>{{ message }}</div>
+      {% endfor %}
+      
+      {% for message in form.month.errors %}
+         <div>{{ message }}</div>
+      {% endfor %}
+
+      {% for message in form.year.errors %}
+         <div>{{ message }}</div>
+      {% endfor %}
+      
+      {% for message in form.distance.errors %}
+         <div>{{ message }}</div>
+      {% endfor %}
+
+      {% for message in form.hour_dep.errors %}
+         <div>{{ message }}</div>
+      {% endfor %}
+      
+      {% for message in form.min_dep.errors %}
+         <div>{{ message }}</div>
+      {% endfor %}
+
+      {% for message in form.hour_arr.errors %}
+         <div>{{ message }}</div>
+      {% endfor %}
+      
+      {% for message in form.min_arr.errors %}
+         <div>{{ message }}</div>
+      {% endfor %}
+            
+      <form action = "http://localhost:8080/plane" method = post>
+         <fieldset>
+            <legend>Flight Details</legend>
+            {{ form.hidden_tag() }}
+            
+            <div style = font-size:15px; font-weight:bold; margin-left:180px;>
+               {{ form.Carrier.label }}<br>
+               {{ form.Carrier }}
+               <br>
+               
+               {{ form.day.label }}<br>
+               {{ form.day }}
+               <br>
+               
+               {{ form.month.label }}<br>
+               {{ form.month }}
+               <br>
+
+               {{ form.year.label }}<br>
+               {{ form.year }}
+               <br>
+			   
+               {{ form.distance.label }}<br>
+               {{ form.distance }}
+               <br>
+
+               {{ form.hour_dep.label }}<br>
+               {{ form.hour_dep }}
+               <br>
+               
+               {{ form.min_dep.label }}<br>
+               {{ form.min_dep }}
+               <br>
+
+               {{ form.hour_arr.label }}<br>
+               {{ form.hour_arr }}
+               <br>
+
+               {{ form.min_arr.label }}<br>
+               {{ form.min_arr }}
+               <br>
+               
+               {{ form.City.label }}<br>
+               {{ form.City }}
+               <br>
+               {{ form.submit }}
+            </div>
+            
+         </fieldset>
+      </form>
+      
+   </body>
+</html>

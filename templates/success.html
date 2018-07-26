@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<nav>
+		<ul>
+			<li><a href="/plane">Back to Planes Prediction</a></li>
+		</ul>
+	</nav>
+	<body>
+		<h2>Flight predicted successfully</h2>
+		<p>Carrier : {{ form.Carrier.data }}</p>
+		<p>Date of Departure : {{ form.year.data }}</p>
+		<p>City of Departure : {{ form.City.data }}</p>		
+		<p>Distance (miles) : {{ form.distance.data }}</p>
+		<p>Time of Departure : {{ form.hour_dep.data }}</p>
+		<p>Time of Arrival : {{ form.hour_arr.data }}</p>
+		<h4>Result prediction : {{ form.min_arr.data }}</h4>		
+	</body>
+</html>
