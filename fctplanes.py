@@ -15,7 +15,7 @@ def plane_prediction(p_carrier, p_month, p_day_w, p_dist, p_dep, p_arr, p_flight
     #import pandas as pd
     #from sklearn.ensemble import RandomForestRegressor
     #from sklearn.externals import joblib
-    file_name = str(p_carrier) + '61.pkl'
+    file_name = str(p_carrier) + '_RF.pkl'
     L_title = ['MONTH', 'DAY_OF_WEEK', 'DISTANCE', 'CRS_DEP_TIME_MIN', 'CRS_ARR_TIME_MIN', 'NB_FLIGHT_ORIGIN_AIRPORT']
     L_features = [p_month, p_day_w, p_dist, p_dep, p_arr, p_flight]
     df_return = pd.DataFrame(columns=L_title)
